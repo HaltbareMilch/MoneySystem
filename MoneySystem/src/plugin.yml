@@ -1,0 +1,12 @@
+name: MoneySystem
+main: de.Roxas98.moneysystem.main.Main
+version: 1.0
+author: Roxas98
+
+commands:
+  money:
+    description: Zeigt die dein Kontostand an
+  give:
+    description: Gibt dir den eingegebenen Betrag auf dein Konto
+  set:
+    description: Setzt dein Konto auf den eingegebenen Betrag
