@@ -25,7 +25,7 @@ public class SetMoneyCMD implements CommandExecutor {
 					FileConfiguration money = Main.getPlugin().getConfig();
 					money.set(player.getDisplayName() + ".balance", args[0]);
 					Main.getPlugin().saveConfig();
-					player.sendMessage(Main.Präfix + "Dein Kontostand wurde auf " + args[0] + " gesetzt");
+					player.sendMessage(Main.Präfix + "Dein Kontostand wurde auf " + args[0] + Main.Waehrung + " gesetzt");
 				
 				}else if(args.length == 2) {
 					Player target = Bukkit.getServer().getPlayer(args[0]);
@@ -34,8 +34,8 @@ public class SetMoneyCMD implements CommandExecutor {
 							FileConfiguration targetMoney = Main.getPlugin().getConfig();
 							targetMoney.set(target.getDisplayName() + ".balance", args[1]);
 							Main.getPlugin().saveConfig();
-							player.sendMessage(Main.Präfix + "Kontostand vom Spieler " + target.getDisplayName() + " wurde auf " + args[1] + " Euro gesetzt!");
-							target.sendMessage(Main.Präfix + "Dein Kontostand wurde auf " + args[1] + " Euro gesetzt!");
+							player.sendMessage(Main.Präfix + "Kontostand vom Spieler " + target.getDisplayName() + " wurde auf " + args[1] + Main.Waehrung + " gesetzt!");
+							target.sendMessage(Main.Präfix + "Dein Kontostand wurde auf " + args[1] + Main.Waehrung + " gesetzt!");
 						}else {
 							player.sendMessage(Main.Präfix + "Der Spieler ist nicht online!");
 						}

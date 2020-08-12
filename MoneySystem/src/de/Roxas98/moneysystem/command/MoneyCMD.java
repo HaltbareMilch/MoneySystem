@@ -27,7 +27,7 @@ public class MoneyCMD implements CommandExecutor{
 					FileConfiguration money = Main.getPlugin().getConfig();
 					String balance = (String) money.get(player.getDisplayName() + ".balance");
 					Main.getPlugin().saveConfig();
-					player.sendMessage(Main.Präfix + "Dein Kontosand beträgt: " + balance);
+					player.sendMessage(Main.Präfix + "Dein Kontosand beträgt: " + balance + Main.Waehrung);
 					
 				}else if(args.length == 1) {
 					if(player.hasPermission("money.balance.other")) {
@@ -35,7 +35,7 @@ public class MoneyCMD implements CommandExecutor{
 						
 						FileConfiguration targetMoney = Main.getPlugin().getConfig();
 						if(targetMoney.getString(target.getDisplayName()) != null) {
-							player.sendMessage(Main.Präfix + "Der Spieler hat " + targetMoney.getString(target.getDisplayName() + ".balance") + " Euro");
+							player.sendMessage(Main.Präfix + "Der Spieler hat " + targetMoney.getString(target.getDisplayName() + ".balance" ) + Main.Waehrung);
 						}else {
 							player.sendMessage(Main.Präfix + "Der Spieler hat noch kein Kontostand!");
 						}

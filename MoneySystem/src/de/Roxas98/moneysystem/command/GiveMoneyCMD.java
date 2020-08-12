@@ -29,7 +29,7 @@ public class GiveMoneyCMD implements CommandExecutor {
 					money.set(player.getDisplayName() + ".balance", Integer.toString(newBalance));
 					Main.getPlugin().saveConfig();
 					
-					player.sendMessage(Main.Präfix + "Deinem Kontostand wurden " + args[0] + " Euro hinzugefügt, jetzt beträgt dein Kontostand " + newBalance + " Euro");
+					player.sendMessage(Main.Präfix + "Deinem Kontostand wurden " + args[0] + Main.Waehrung +" hinzugefügt, jetzt beträgt dein Kontostand " + newBalance + Main.Waehrung);
 				
 				}else if(args.length == 2) {
 					Player target = Bukkit.getServer().getPlayer(args[0]);
@@ -47,8 +47,8 @@ public class GiveMoneyCMD implements CommandExecutor {
 							targetMoney.set(target.getDisplayName() + ".balance", Integer.toString(newBalanceTarget));
 							Main.getPlugin().saveConfig();
 							
-							player.sendMessage(Main.Präfix + "Du hast " + target.getDisplayName() + args[1] + " Euro gegeben!");
-							target.sendMessage(Main.Präfix + "Du hast von " + player.getDisplayName() + " " + args[1] + " Euro erhalten!");
+							player.sendMessage(Main.Präfix + "Du hast " + target.getDisplayName() + args[1] + Main.Waehrung +" gegeben!");
+							target.sendMessage(Main.Präfix + "Du hast von " + player.getDisplayName() + " " + args[1] + Main.Waehrung +" erhalten!");
 							
 						}else {
 							player.sendMessage(Main.Präfix + "Der Spieler ist nicht online!");

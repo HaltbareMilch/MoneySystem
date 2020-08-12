@@ -13,6 +13,7 @@ public class Main extends JavaPlugin{
 	
 	public static String Präfix = "§8[§4MoneySystem§8] §r";
 	public static String Permission = "Du hast dazu keine Rechte!";
+	public static char Waehrung = '€';
 	
 	public static String CommandLine = "Dieser Befehel kann nur von Spielern ausgeführt werden";
 	
